@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+     <!-- icons -->
+    <link rel="stylesheet" href="css/icons.min.css">
+    <style>
+        body {
+            background: #f5f5f5;
+        }
+
+        .sidebar {
+            min-height: 100vh;
+            background: #2c3e50;
+        }
+
+        .sidebar .nav-link {
+            color: #ecf0f1;
+            padding: 15px 20px;
+            border-radius: 5px;
+            margin-bottom: 5px;
+            transition: all 0.3s;
+        }
+
+        .sidebar .nav-link:hover,
+        .sidebar .nav-link.active {
+            background: #34495e;
+            color: #3498db;
+        }
+
+        .stat-card {
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .chart-container {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-2 px-0 sidebar">
+                <div class="p-3">
+                    <h4 class="text-white text-center mb-4">📊 Dashboard</h4>
+                    <nav class="nav flex-column">
+                        <a class="nav-link active" href="#">
+                            🏠 Home
+                        </a>
+                        <a class="nav-link" href="#">
+                            📈 Reports
+                        </a>
+                        <a class="nav-link" href="#">
+                            👥 Users
+                        </a>
+                        <a class="nav-link" href="#">
+                            📦 Products
+                        </a>
+                        <a class="nav-link" href="#">
+                            ⚙️ Settings
+                        </a>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-md-10">
+                <!-- Top Bar -->
+                <nav class="navbar navbar-expand navbar-light bg-white shadow-sm mb-4">
+                    <div class="container-fluid">
+                        <form class="d-flex me-auto">
+                            <input class="form-control" type="search" placeholder="Search...">
+                        </form>
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link" href="#" data-bs-toggle="dropdown">
+                                    <i class="fas fa-bell me-1"></i> <span class="badge bg-danger">3</span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Notification 1</a></li>
+                                    <li><a class="dropdown-item" href="#">Notification 2</a></li>
+                                    <li><a class="dropdown-item" href="#">Notification 3</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link" href="#" data-bs-toggle="dropdown">
+                                    <i class="fas fa-user-check"></i> John Doe
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <!-- Content -->
+                <div class="container-fluid">
+                    <h2 class="mb-4">Welcome, John! 👋</h2>
+
+                    <!-- Statistics Cards -->
+                    <div class="row g-3 mb-4">
+                        <div class="col-md-3">
+                            <div class="card stat-card border-1 border-success-subtle shadow-sm">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <p class="text-muted mb-1">Total Sales</p>
+                                            <h3 class="mb-0">$45,250</h3>
+                                            <small class="text-success">+12.5% ↑</small>
+                                        </div>
+                                        <div class="display-4">💰</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card stat-card border-1 border-warning-subtle shadow-sm">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <p class="text-muted mb-1">Orders</p>
+                                            <h3 class="mb-0">1,234</h3>
+                                            <small class="text-success">+8.2% ↑</small>
+                                        </div>
+                                        <div class="display-4">📦</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card stat-card border-1 border-info-subtle shadow-sm">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <p class="text-muted mb-1">Customers</p>
+                                            <h3 class="mb-0">8,456</h3>
+                                            <small class="text-success">+15.3% ↑</small>
+                                        </div>
+                                        <div class="display-4">👥</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card stat-card border-1 border-danger-subtle shadow-sm">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <p class="text-muted mb-1">Visitors</p>
+                                            <h3 class="mb-0">45,234</h3>
+                                            <small class="text-danger">-2.4% ↓</small>
+                                        </div>
+                                        <div class="display-4">📊</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tables and Charts -->
+                    <div class="row g-3">
+                        <div class="col-md-8">
+                            <div class="chart-container">
+                                <h5>
+                                    <i class="fas fa-chart-line me-1"></i>
+                                    Monthly Sales</h5>
+                                <div class="text-center">
+                                    <img src="images/graph.png" class="img-fluid" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="chart-container">
+                                <h5>
+                                    <i class="fas fa-medal me-1"></i>
+                                    Top Products</h5>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item d-flex justify-content-between">
+                                        <span>Product 1</span>
+                                        <span class="badge bg-primary">234</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between">
+                                        <span>Product 2</span>
+                                        <span class="badge bg-info">189</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between">
+                                        <span>Product 3</span>
+                                        <span class="badge bg-danger">156</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between">
+                                        <span>Product 4</span>
+                                        <span class="badge bg-warning">143</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between">
+                                        <span>Product 5</span>
+                                        <span class="badge bg-success">128</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between">
+                                        <span>Product 6</span>
+                                        <span class="badge bg-dark">128</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between">
+                                        <span>Product 7</span>
+                                        <span class="badge bg-primary">128</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between">
+                                        <span>Product 8</span>
+                                        <span class="badge bg-info">128</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recent Orders Table -->
+                    <div class="chart-container mt-3">
+                        <h5 class="mb-3">
+                            <i class="fas fa-list me-1"></i>
+                            Recent Orders</h5>
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Order #</th>
+                                        <th>Customer</th>
+                                        <th>Product</th>
+                                        <th>Amount</th>
+                                        <th>Status</th>
+                                        <th>Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>#1234</td>
+                                        <td>John Doe</td>
+                                        <td>Dell Laptop</td>
+                                        <td>$899</td>
+                                        <td><span class="badge bg-success">Completed</span></td>
+                                        <td>2025-11-01</td>
+                                    </tr>
+                                    <tr>
+                                        <td>#1235</td>
+                                        <td>Jane Smith</td>
+                                        <td>iPhone 15</td>
+                                        <td>$1,199</td>
+                                        <td><span class="badge bg-warning">Processing</span></td>
+                                        <td>2025-11-01</td>
+                                    </tr>
+                                    <tr>
+                                        <td>#1236</td>
+                                        <td>Bob Wilson</td>
+                                        <td>Smart Watch</td>
+                                        <td>$299</td>
+                                        <td><span class="badge bg-info">Shipping</span></td>
+                                        <td>2025-10-31</td>
+                                    </tr>
+                                    <tr>
+                                        <td>#1237</td>
+                                        <td>Mary Johnson</td>
+                                        <td>Samsung Tablet</td>
+                                        <td>$599</td>
+                                        <td><span class="badge bg-danger">Cancelled</span></td>
+                                        <td>2025-10-31</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> -->
+</body>
+
+</html>

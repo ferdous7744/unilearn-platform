@@ -1,0 +1,39 @@
+
+        body {
+            background:  rgb(255, 254, 254);
+        }
+
+        .sidebar {
+            min-height: 100vh;
+            background: #432c50;
+        }
+
+        .sidebar .nav-link {
+            color: #ecf0f1;
+            padding: 15px 20px;
+            border-radius: 5px;
+            margin-bottom: 5px;
+            transition: all 0.3s;
+        }
+
+        .sidebar .nav-link:hover,
+        .sidebar .nav-link.active {
+            background: #915fae;
+            color: #000304;
+        }
+
+        .stat-card {
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .chart-container {
+            background: rgb(197, 197, 197);
+            border-radius: 10px;
+            padding: 20px;
+        }
+    
